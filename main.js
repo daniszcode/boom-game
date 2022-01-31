@@ -4,6 +4,7 @@
 
 const containerBaloes = document.querySelector(".container-baloes");
 
+const elementoImg = document.createElement("img");
 function adicionarBalao() {
   const elementoImg = document.createElement("img");
 
@@ -22,8 +23,25 @@ function adicionarBalao() {
   containerBaloes.appendChild(elementoImg);
 
   console.log("Elemento Img =>", elementoImg);
+
+  elementoImg.addEventListener("click", function() {
+    console.log("clicou");
+    elementoImg.remove()
+  } )
+    
+  
 }
+
 
 setInterval(adicionarBalao, 3000); //3000 milesegundos = 3 segundos
 
 // adicionarBalao();
+
+
+//[x]fazer o alfinete aparecer quando em contato da area 
+//do balão no lugar da seta do mouse
+//fazer o alfinete pocar o balao ao ser clicado
+
+
+
+
